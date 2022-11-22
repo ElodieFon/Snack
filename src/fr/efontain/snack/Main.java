@@ -8,11 +8,11 @@ import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class JFenetre extends JFrame implements Constances{
+public class Main extends JFrame implements Constances{
 
     private ModelDuJeu modele;
     
-    public JFenetre() {
+    public Main() {
         // titre de la fenêtre
         super("Snake");
         // créer le modèle du jeu
@@ -27,7 +27,7 @@ public class JFenetre extends JFrame implements Constances{
             protected void paintComponent(Graphics g) {
                   super.paintComponent(g);
                   // affichage du modèle du jeu
-                  JFenetre.this.modele.affichage(g);
+                  Main.this.modele.affichage(g);
             }
         };
         // dimension de ce conteneur 
@@ -45,7 +45,7 @@ public class JFenetre extends JFrame implements Constances{
             while (true) { // boucle infinie
                 // à chaque fois que la boucle est exécutée, la méthode de calcul du jeu est appelée.
                 // Comme la boucle est infinie, la méthode de calcul sera appelée en cycle perpétuel.
-                JFenetre.this.modele.calcul();
+                Main.this.modele.calcul();
                 // demander à l'EDT de redessiner le conteneur , ce qui aura pour effet de dessiner notre jeu
                 content.repaint();
                   // temporisation
@@ -64,7 +64,7 @@ public class JFenetre extends JFrame implements Constances{
     content.addKeyListener(new KeyAdapter() {
         @Override
         public void keyPressed(KeyEvent e) {
-            JFenetre.this.modele.gestionDuClavier(e);
+            Main.this.modele.gestionDuClavier(e);
         }
     });
     // s'assurer du focus pour le listener clavier
@@ -75,7 +75,7 @@ public class JFenetre extends JFrame implements Constances{
   // Lancement du jeu 
     public static void main(String[] args) {
         // création de la fenêtre
-        JFenetre fenetre = new JFenetre();
+        Main fenetre = new Main();
         // dimensionnement de la fenêre "au plus juste" suivant la taille des composants qu'elle contient
         fenetre.pack();
         // centrage sur l'écran
