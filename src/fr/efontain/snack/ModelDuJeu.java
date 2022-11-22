@@ -63,7 +63,7 @@ public class ModelDuJeu {
             g.drawString(str, x, y);
         }
        // affichage du niveau
-       g.setColor(Color.BLUE);
+       g.setColor(Color.GRAY);
        g.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 20));
        g.drawString(String.valueOf(getNiveau()), 5, 25);
     }

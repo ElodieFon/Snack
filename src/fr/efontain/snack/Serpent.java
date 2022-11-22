@@ -3,6 +3,7 @@ package fr.efontain.snack;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.Color;
 
 import java.util.LinkedList;
 
@@ -89,7 +90,7 @@ public class Serpent {
     private int getThresholdCounter(int niveau) {
         switch (niveau) {
               case 1:
-                    return 20;
+                    return 18;
               case 2:
                     return 16;
               case 3:
@@ -149,6 +150,7 @@ public class Serpent {
         // activer l'anti-aliasing du dessin
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING , RenderingHints.VALUE_ANTIALIAS_ON);
+        g.setColor(Color.ORANGE);
                           
         // dessin du serpent
         for (Case box : this.list) {

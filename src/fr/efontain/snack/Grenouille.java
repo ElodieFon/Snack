@@ -32,7 +32,7 @@ public class Grenouille extends Case {
         Graphics2D g2 = (Graphics2D) g;
         // objet initial
         AffineTransform tr = g2.getTransform();
-        g.setColor(Color.RED);
+        g.setColor(Color.GREEN);
         // rotation
         g2.setTransform(AffineTransform.getRotateInstance(
                         Math.toRadians(this.angle),
