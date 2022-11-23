@@ -43,13 +43,10 @@ public class Grenouille extends Case {
         g2.setTransform(tr);
     }
     public void calcul() {
-        // incrémentation de l'angle de 4 degrés
+        // incrémentation de l'angle de 4 degrés pour fair tourner la grenouille
+
         this.angle += 4;
-        // ne plus poursuivre la rotation après une
-      // rotation complète
-        if (this.angle > 360) {
-            this.angle = 360;
-        }
+      
     }
     
 }

@@ -53,6 +53,7 @@ public class ModelDuJeu {
         this.serpent.affichage(g);
         // affichage de la grenouille
         this.grenouille.affichage(g);
+        //game over
         if (this.laPartieEstPerdue) {
             String str = "game over";
             g.setColor(Color.RED);

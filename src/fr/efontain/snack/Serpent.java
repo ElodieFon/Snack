@@ -85,12 +85,14 @@ public class Serpent {
         return this.eatCount;
   }
     private boolean peutManger(Grenouille grenouille) {
-        return grenouille.equals(getNextcase());
+      Case nextCase = getNextcase();
+      return grenouille.getIndiceX() == nextCase.getIndiceX()
+      && grenouille.getIndiceY() == nextCase.getIndiceY();
     }
     private int getThresholdCounter(int niveau) {
         switch (niveau) {
               case 1:
-                    return 18;
+                    return 20;
               case 2:
                     return 16;
               case 3:
